@@ -1,12 +1,10 @@
 pipeline {
-    agent { label 'master' }
+    agent { label 'main' }
     stages {
-        stage('build & run') {
+        stage('build') {
             steps {
-                cd jenkinsCI
-                mvn clean install
+                echo "Hello World!"
             }
         }
     }
 }
-
