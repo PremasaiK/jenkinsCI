@@ -4,10 +4,9 @@ pipeline {
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.'
-	       
-	       bat '''
-               echo "exiting"
-	      '''
+              bat '''echo "hello"
+              ls'''
+
             }
         }
    }
