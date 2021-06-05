@@ -11,7 +11,6 @@ pipeline {
         }
 	stage('Build stage 2') { 
             steps { 
-               echo 'This is a minimal pipeline.'
 		   bat '''mvn package
                           java -jar target/gs-maven-0.1.0.jar
                        '''
@@ -19,9 +18,9 @@ pipeline {
         }
 	stage('Build stage 3') { 
             steps { 
-               echo 'This is a minimal pipeline.'
-		   bat '''java -jar target/gs-maven-0.1.0.jar
-                       '''
+		   bat '''cd C:\\Users\\raghu\\jenkinsCI
+                          java -jar target/gs-maven-0.1.0.jar
+			  '''
             }
         }
    }
