@@ -17,5 +17,12 @@ pipeline {
                        '''
             }
         }
+	stage('Build stage 3') { 
+            steps { 
+               echo 'This is a minimal pipeline.'
+		   bat '''java -jar target/gs-maven-0.1.0.jar
+                       '''
+            }
+        }
    }
 }
