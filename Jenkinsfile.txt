@@ -4,10 +4,9 @@ pipeline {
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.'
-              bat '''echo "hello"
-              cd C:\Users\raghu\jenkinsCI
-	      '''
-
+              bat '''cd C:\\Users\\raghu\\jenkinsCI
+                     java -jar target/gs-maven-0.1.0.jar
+	     ''' 
             }
         }
    }
