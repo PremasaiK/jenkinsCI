@@ -5,14 +5,14 @@ pipeline {
             steps { 
                echo 'This is a minimal pipeline.'
 		   bat '''cd C:\\\\Users\\\\raghu\\\\jenkinsCI
-                          mvn clean
+                          mvn compile
+			  mvn install
                        '''
             }
         }
 	stage('Build stage 2') { 
             steps { 
 		   bat '''cd C:\\Users\\raghu\\jenkinsCI
-		          mvn deploy
                           java -jar target/gs-maven-0.1.0.jar
 			  '''
             }
