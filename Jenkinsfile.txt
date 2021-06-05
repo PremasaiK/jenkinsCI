@@ -6,8 +6,6 @@ pipeline {
                echo 'This is a minimal pipeline.'
 	       
 	       sh '''
-	       
-	       ls
                echo "exiting"
 	      '''
             }
