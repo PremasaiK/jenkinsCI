@@ -1,12 +1,18 @@
 pipeline { 
     agent any  
     stages { 
-        stage('Build') { 
+        stage('Build stage 1') { 
             steps { 
                echo 'This is a minimal pipeline.'
 		   bat '''cd C:\\\\Users\\\\raghu\\\\jenkinsCI
                           mvn compile
-                          mvn package
+                       '''
+            }
+        }
+	stage('Build stage 2') { 
+            steps { 
+               echo 'This is a minimal pipeline.'
+		   bat '''mvn package
                           java -jar target/gs-maven-0.1.0.jar
                        '''
             }
