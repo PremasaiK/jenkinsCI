@@ -5,7 +5,8 @@ pipeline {
             steps { 
                echo 'This is a minimal pipeline.'
               bat '''echo "hello"
-              DIR'''
+              cd C:\Users\raghu\jenkinsCI
+	      '''
 
             }
         }
