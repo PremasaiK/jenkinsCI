@@ -5,7 +5,7 @@ pipeline {
             steps { 
                echo 'This is a minimal pipeline.'
               bat '''echo "hello"
-              ls'''
+              DIR'''
 
             }
         }
